@@ -1,0 +1,1543 @@
+{
+  "version": "3.2",
+  "log": [
+    {
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:20",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:28"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Ownable",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol:18",
+        "version": {
+          "withMetadata": "82a3406c9cc0980901e5a32a328ec29a2a81df55fe6630f99f9bf931c8459d6a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "37ce20575359ef2ff4e664bbcce0033f2c30da134cd42722c2277dab4dfe2f5a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:191"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Math": {
+        "src": "@openzeppelin/contracts/utils/math/Math.sol:9",
+        "version": {
+          "withMetadata": "a054e98f5ba1d66e7aabed949a6908e764c7934cc163b7643de75046214c798f",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin/contracts/utils/math/SafeMath.sol:16",
+        "version": {
+          "withMetadata": "3c88707bfacda32bcbd7c53b2beaf2dabf60b1c00de0a2d966a87cbed6511bc2",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Admin": {
+        "src": "contracts/Admin.sol:3",
+        "version": {
+          "withMetadata": "0611e578fc36b467f720f37330e4a4957eeb8cb2dacbf5477cc1e016dacad7ba",
+          "withoutMetadata": "3b41a6eb2a348aeb0a400e7de08250be179dc51506f234b408d477c464a65f3d",
+          "linkedWithoutMetadata": "3b41a6eb2a348aeb0a400e7de08250be179dc51506f234b408d477c464a65f3d"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(uint256,uint256,uint256,uint256,uint256,uint256,uint256)",
+          "editInitialProposal(uint256)",
+          "editMinDeposit(uint256)",
+          "editDurationDeposit(uint256)",
+          "editDurationVote(uint256)",
+          "editQuorum(uint256)",
+          "editThresholdVeto(uint256)",
+          "editThresholdPassed(uint256)",
+          "powerValidator(address[])",
+          "powerAdmin(address[])"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Admin",
+            "src": "contracts/Admin.sol:4"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Ownable",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            },
+            {
+              "label": "initialProposal",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:14"
+            },
+            {
+              "label": "minDeposit",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:15"
+            },
+            {
+              "label": "durationDeposit",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:16"
+            },
+            {
+              "label": "durationVote",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:17"
+            },
+            {
+              "label": "quorum",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:18"
+            },
+            {
+              "label": "thresholdVeto",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:19"
+            },
+            {
+              "label": "thresholdPassed",
+              "offset": 0,
+              "slot": "7",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:20"
+            },
+            {
+              "label": "admin",
+              "offset": 0,
+              "slot": "8",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:22"
+            },
+            {
+              "label": "validator",
+              "offset": 0,
+              "slot": "9",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:23"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "GovernanceV2": {
+        "src": "contracts/GovernanceV2.sol:24",
+        "version": {
+          "withMetadata": "d65402764647ae080867b1f8ac34645f513d61152a70aabeb1386a744482d32f",
+          "withoutMetadata": "b87ba81ed6224619429c592a57274c12021124931fbe535e9f31d50a8599a697",
+          "linkedWithoutMetadata": "b87ba81ed6224619429c592a57274c12021124931fbe535e9f31d50a8599a697"
+        },
+        "inherit": [
+          "Admin",
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeERC20",
+          "SafeMath"
+        ],
+        "methods": [
+          "(address,address,address)",
+          "editStakeAddress(address)",
+          "UpdateProposalNumber(uint256)",
+          "CloseCreateProposal()",
+          "createProposal(string,string)",
+          "executeProposal(uint256)",
+          "activeDeposit(uint256,uint256)",
+          "deposit(uint256,uint256)",
+          "vote(uint256,uint256,uint256)",
+          "withdrawal(uint256)",
+          "emergencyWithdraw(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "GovernanceV2",
+            "src": "contracts/GovernanceV2.sol:30"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "proposalNumber",
+            "src": "contracts/GovernanceV2.sol:55"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Ownable",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            },
+            {
+              "label": "initialProposal",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:14"
+            },
+            {
+              "label": "minDeposit",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:15"
+            },
+            {
+              "label": "durationDeposit",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:16"
+            },
+            {
+              "label": "durationVote",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:17"
+            },
+            {
+              "label": "quorum",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:18"
+            },
+            {
+              "label": "thresholdVeto",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:19"
+            },
+            {
+              "label": "thresholdPassed",
+              "offset": 0,
+              "slot": "7",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:20"
+            },
+            {
+              "label": "admin",
+              "offset": 0,
+              "slot": "8",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:22"
+            },
+            {
+              "label": "validator",
+              "offset": 0,
+              "slot": "9",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:23"
+            },
+            {
+              "label": "governanceToken",
+              "offset": 0,
+              "slot": "10",
+              "type": "t_contract(IERC20)182",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:27"
+            },
+            {
+              "label": "stake",
+              "offset": 0,
+              "slot": "11",
+              "type": "t_contract(Stake)1591",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:28"
+            },
+            {
+              "label": "burn",
+              "offset": 0,
+              "slot": "12",
+              "type": "t_address",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:29"
+            },
+            {
+              "label": "mapDeposits",
+              "offset": 0,
+              "slot": "13",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:53"
+            },
+            {
+              "label": "mapVotes",
+              "offset": 0,
+              "slot": "14",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:54"
+            },
+            {
+              "label": "proposalNumber",
+              "offset": 0,
+              "slot": "15",
+              "type": "t_uint256",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:55"
+            },
+            {
+              "label": "boolCreate",
+              "offset": 0,
+              "slot": "16",
+              "type": "t_bool",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:56"
+            },
+            {
+              "label": "statusVotes",
+              "offset": 0,
+              "slot": "17",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_uint256)))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:57"
+            },
+            {
+              "label": "withdrawID",
+              "offset": 0,
+              "slot": "18",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:58"
+            },
+            {
+              "label": "proposal",
+              "offset": 0,
+              "slot": "19",
+              "type": "t_mapping(t_uint256,t_struct(Proposal)1684_storage)",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:59"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_contract(IERC20)182": {
+              "label": "contract IERC20",
+              "numberOfBytes": "20"
+            },
+            "t_contract(Stake)1591": {
+              "label": "contract Stake",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_uint256)))": {
+              "label": "mapping(address => mapping(uint256 => mapping(uint256 => uint256)))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+              "label": "mapping(address => mapping(uint256 => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))": {
+              "label": "mapping(uint256 => mapping(uint256 => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(Proposal)1684_storage)": {
+              "label": "mapping(uint256 => struct GovernanceV2.Proposal)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_uint256)": {
+              "label": "mapping(uint256 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Proposal)1684_storage": {
+              "label": "struct GovernanceV2.Proposal",
+              "members": [
+                {
+                  "label": "proposer",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "title",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "description",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "deposit",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "status",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "votesPassed",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "votesFail",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "votesVeto",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "totalStake",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "start",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "endDeposit",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "10"
+                },
+                {
+                  "label": "endVote",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "11"
+                },
+                {
+                  "label": "blockTime",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "12"
+                }
+              ],
+              "numberOfBytes": "416"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "Stake": {
+        "src": "contracts/GovernanceV2.sol:7",
+        "version": {
+          "withMetadata": "37d6fb5b9c0e64e7784036a1f86a983080b63f509b1f831251424e0f8c835dec",
+          "withoutMetadata": "b7984c76a223344906c5cd30ee02c9050f2e22330d30a2f05424ee575b509bdf",
+          "linkedWithoutMetadata": "b7984c76a223344906c5cd30ee02c9050f2e22330d30a2f05424ee575b509bdf"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "poolInfo",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_array(t_struct(PoolInfo)1579_storage)dyn_storage",
+              "contract": "Stake",
+              "src": "contracts/GovernanceV2.sol:20"
+            },
+            {
+              "label": "userInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)1567_storage))",
+              "contract": "Stake",
+              "src": "contracts/GovernanceV2.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(PoolInfo)1579_storage)dyn_storage": {
+              "label": "struct Stake.PoolInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20)182": {
+              "label": "contract IERC20",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_struct(UserInfo)1567_storage)": {
+              "label": "mapping(address => struct Stake.UserInfo)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)1567_storage))": {
+              "label": "mapping(uint256 => mapping(address => struct Stake.UserInfo))",
+              "numberOfBytes": "32"
+            },
+            "t_struct(PoolInfo)1579_storage": {
+              "label": "struct Stake.PoolInfo",
+              "members": [
+                {
+                  "label": "heToken",
+                  "type": "t_contract(IERC20)182",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "allocPoint",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "lastRewardBlock",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "accHePerShare",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "balancePool",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "4"
+                }
+              ],
+              "numberOfBytes": "160"
+            },
+            "t_struct(UserInfo)1567_storage": {
+              "label": "struct Stake.UserInfo",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "rewardDebt",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "pendingDebt",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    },
+    {
+      "Ownable": {
+        "src": "@openzeppelin/contracts/access/Ownable.sol:20",
+        "inherit": [
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Ownable",
+            "src": "@openzeppelin/contracts/access/Ownable.sol:28"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Ownable",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol:18",
+        "version": {
+          "withMetadata": "82a3406c9cc0980901e5a32a328ec29a2a81df55fe6630f99f9bf931c8459d6a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [
+          "Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "37ce20575359ef2ff4e664bbcce0033f2c30da134cd42722c2277dab4dfe2f5a",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:191"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Math": {
+        "src": "@openzeppelin/contracts/utils/math/Math.sol:9",
+        "version": {
+          "withMetadata": "a054e98f5ba1d66e7aabed949a6908e764c7934cc163b7643de75046214c798f",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "SafeMath": {
+        "src": "@openzeppelin/contracts/utils/math/SafeMath.sol:16",
+        "version": {
+          "withMetadata": "3c88707bfacda32bcbd7c53b2beaf2dabf60b1c00de0a2d966a87cbed6511bc2",
+          "withoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db",
+          "linkedWithoutMetadata": "a64c6cf9c6ba9368f5132c93a0196b3204a7963dbb4dd05dfddb4ab23126b8db"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.1",
+          "flat": false
+        }
+      },
+      "Admin": {
+        "src": "contracts/Admin.sol:3",
+        "version": {
+          "withMetadata": "0611e578fc36b467f720f37330e4a4957eeb8cb2dacbf5477cc1e016dacad7ba",
+          "withoutMetadata": "3b41a6eb2a348aeb0a400e7de08250be179dc51506f234b408d477c464a65f3d",
+          "linkedWithoutMetadata": "3b41a6eb2a348aeb0a400e7de08250be179dc51506f234b408d477c464a65f3d"
+        },
+        "inherit": [
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(uint256,uint256,uint256,uint256,uint256,uint256,uint256)",
+          "editInitialProposal(uint256)",
+          "editMinDeposit(uint256)",
+          "editDurationDeposit(uint256)",
+          "editDurationVote(uint256)",
+          "editQuorum(uint256)",
+          "editThresholdVeto(uint256)",
+          "editThresholdPassed(uint256)",
+          "powerValidator(address[])",
+          "powerAdmin(address[])"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "Admin",
+            "src": "contracts/Admin.sol:4"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Ownable",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            },
+            {
+              "label": "initialProposal",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:14"
+            },
+            {
+              "label": "minDeposit",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:15"
+            },
+            {
+              "label": "durationDeposit",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:16"
+            },
+            {
+              "label": "durationVote",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:17"
+            },
+            {
+              "label": "quorum",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:18"
+            },
+            {
+              "label": "thresholdVeto",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:19"
+            },
+            {
+              "label": "thresholdPassed",
+              "offset": 0,
+              "slot": "7",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:20"
+            },
+            {
+              "label": "admin",
+              "offset": 0,
+              "slot": "8",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:22"
+            },
+            {
+              "label": "validator",
+              "offset": 0,
+              "slot": "9",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:23"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "GovernanceV2": {
+        "src": "contracts/GovernanceV2.sol:24",
+        "version": {
+          "withMetadata": "d65402764647ae080867b1f8ac34645f513d61152a70aabeb1386a744482d32f",
+          "withoutMetadata": "b87ba81ed6224619429c592a57274c12021124931fbe535e9f31d50a8599a697",
+          "linkedWithoutMetadata": "b87ba81ed6224619429c592a57274c12021124931fbe535e9f31d50a8599a697"
+        },
+        "inherit": [
+          "Admin",
+          "Ownable",
+          "Context"
+        ],
+        "libraries": [
+          "SafeERC20",
+          "SafeMath"
+        ],
+        "methods": [
+          "(address,address,address)",
+          "editStakeAddress(address)",
+          "UpdateProposalNumber(uint256)",
+          "CloseCreateProposal()",
+          "createProposal(string,string)",
+          "executeProposal(uint256)",
+          "activeDeposit(uint256,uint256)",
+          "deposit(uint256,uint256)",
+          "vote(uint256,uint256,uint256)",
+          "withdrawal(uint256)",
+          "emergencyWithdraw(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "GovernanceV2",
+            "src": "contracts/GovernanceV2.sol:30"
+          },
+          {
+            "kind": "state-variable-assignment",
+            "name": "proposalNumber",
+            "src": "contracts/GovernanceV2.sol:55"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "Ownable",
+              "src": "@openzeppelin/contracts/access/Ownable.sol:21"
+            },
+            {
+              "label": "initialProposal",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:14"
+            },
+            {
+              "label": "minDeposit",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:15"
+            },
+            {
+              "label": "durationDeposit",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:16"
+            },
+            {
+              "label": "durationVote",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:17"
+            },
+            {
+              "label": "quorum",
+              "offset": 0,
+              "slot": "5",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:18"
+            },
+            {
+              "label": "thresholdVeto",
+              "offset": 0,
+              "slot": "6",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:19"
+            },
+            {
+              "label": "thresholdPassed",
+              "offset": 0,
+              "slot": "7",
+              "type": "t_uint256",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:20"
+            },
+            {
+              "label": "admin",
+              "offset": 0,
+              "slot": "8",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:22"
+            },
+            {
+              "label": "validator",
+              "offset": 0,
+              "slot": "9",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "Admin",
+              "src": "contracts/Admin.sol:23"
+            },
+            {
+              "label": "governanceToken",
+              "offset": 0,
+              "slot": "10",
+              "type": "t_contract(IERC20)182",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:27"
+            },
+            {
+              "label": "stake",
+              "offset": 0,
+              "slot": "11",
+              "type": "t_contract(Stake)1591",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:28"
+            },
+            {
+              "label": "burn",
+              "offset": 0,
+              "slot": "12",
+              "type": "t_address",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:29"
+            },
+            {
+              "label": "mapDeposits",
+              "offset": 0,
+              "slot": "13",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:53"
+            },
+            {
+              "label": "mapVotes",
+              "offset": 0,
+              "slot": "14",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:54"
+            },
+            {
+              "label": "proposalNumber",
+              "offset": 0,
+              "slot": "15",
+              "type": "t_uint256",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:55"
+            },
+            {
+              "label": "boolCreate",
+              "offset": 0,
+              "slot": "16",
+              "type": "t_bool",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:56"
+            },
+            {
+              "label": "statusVotes",
+              "offset": 0,
+              "slot": "17",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_uint256)))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:57"
+            },
+            {
+              "label": "withdrawID",
+              "offset": 0,
+              "slot": "18",
+              "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:58"
+            },
+            {
+              "label": "proposal",
+              "offset": 0,
+              "slot": "19",
+              "type": "t_mapping(t_uint256,t_struct(Proposal)1684_storage)",
+              "contract": "GovernanceV2",
+              "src": "contracts/GovernanceV2.sol:59"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_contract(IERC20)182": {
+              "label": "contract IERC20",
+              "numberOfBytes": "20"
+            },
+            "t_contract(Stake)1591": {
+              "label": "contract Stake",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+              "label": "mapping(address => mapping(uint256 => bool))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_uint256)))": {
+              "label": "mapping(address => mapping(uint256 => mapping(uint256 => uint256)))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+              "label": "mapping(address => mapping(uint256 => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_bool)": {
+              "label": "mapping(uint256 => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_uint256,t_uint256))": {
+              "label": "mapping(uint256 => mapping(uint256 => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(Proposal)1684_storage)": {
+              "label": "mapping(uint256 => struct GovernanceV2.Proposal)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_uint256)": {
+              "label": "mapping(uint256 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Proposal)1684_storage": {
+              "label": "struct GovernanceV2.Proposal",
+              "members": [
+                {
+                  "label": "proposer",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "title",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "description",
+                  "type": "t_string_storage",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "deposit",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "status",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "votesPassed",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "votesFail",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "6"
+                },
+                {
+                  "label": "votesVeto",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "7"
+                },
+                {
+                  "label": "totalStake",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "8"
+                },
+                {
+                  "label": "start",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "9"
+                },
+                {
+                  "label": "endDeposit",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "10"
+                },
+                {
+                  "label": "endVote",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "11"
+                },
+                {
+                  "label": "blockTime",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "12"
+                }
+              ],
+              "numberOfBytes": "416"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      },
+      "Stake": {
+        "src": "contracts/GovernanceV2.sol:7",
+        "version": {
+          "withMetadata": "37d6fb5b9c0e64e7784036a1f86a983080b63f509b1f831251424e0f8c835dec",
+          "withoutMetadata": "b7984c76a223344906c5cd30ee02c9050f2e22330d30a2f05424ee575b509bdf",
+          "linkedWithoutMetadata": "b7984c76a223344906c5cd30ee02c9050f2e22330d30a2f05424ee575b509bdf"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "poolInfo",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_array(t_struct(PoolInfo)1579_storage)dyn_storage",
+              "contract": "Stake",
+              "src": "contracts/GovernanceV2.sol:20"
+            },
+            {
+              "label": "userInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)1567_storage))",
+              "contract": "Stake",
+              "src": "contracts/GovernanceV2.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(PoolInfo)1579_storage)dyn_storage": {
+              "label": "struct Stake.PoolInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20)182": {
+              "label": "contract IERC20",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_struct(UserInfo)1567_storage)": {
+              "label": "mapping(address => struct Stake.UserInfo)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_mapping(t_address,t_struct(UserInfo)1567_storage))": {
+              "label": "mapping(uint256 => mapping(address => struct Stake.UserInfo))",
+              "numberOfBytes": "32"
+            },
+            "t_struct(PoolInfo)1579_storage": {
+              "label": "struct Stake.PoolInfo",
+              "members": [
+                {
+                  "label": "heToken",
+                  "type": "t_contract(IERC20)182",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "allocPoint",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "lastRewardBlock",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "accHePerShare",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "balancePool",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "4"
+                }
+              ],
+              "numberOfBytes": "160"
+            },
+            "t_struct(UserInfo)1567_storage": {
+              "label": "struct Stake.UserInfo",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "rewardDebt",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "pendingDebt",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.1",
+          "flat": true
+        }
+      }
+    }
+  ]
+}
